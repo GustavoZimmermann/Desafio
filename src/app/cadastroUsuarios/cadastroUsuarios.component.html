@@ -1,0 +1,56 @@
+<h2>Cadastro de Usuários</h2>
+<div> 
+    <div>
+        <input type="text" id="name" placeholder="Nome" [formControl]="nomeUsuario"><br>
+        <input type="text" id="sobronome" placeholder="Sobronome" [formControl]="sobrenomeUsuario"><br>
+    </div> 
+    <div>  
+        <button (click)= "cadastrarUsuario()">Cadastrar</button>
+    </div> 
+</div>
+
+<h2>Tabela Usuários</h2>
+
+<table class="tabela">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            Sobronome
+        </th>
+        <th>
+            Sala 1
+        </th>
+        <th>
+            Sala 2
+        </th>
+        <th>
+            Café
+        </th>
+    </tr>
+
+    <tr *ngFor="let item of listaUsuarios">
+        <td>
+            {{item.Id}}
+        </td>
+        <td>
+            {{item.Nome}}
+        </td>
+        <td>
+            {{item.Sobrenome}}
+        </td>
+        <td>
+            {{item.Sala1.Nome}}
+        </td>
+        <td>
+            {{item.Sala2.Nome}}
+        </td>
+        <td>
+            {{item.Cafe.Nome}}
+        </td>
+    </tr>
+</table>

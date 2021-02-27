@@ -1,0 +1,36 @@
+<h2>Cadastro Café</h2>
+<div> 
+    <div>
+        <input type="text" id="nome" placeholder="Nome" [formControl]="nomeCafe"><br>
+        <input type="number" id="lotação" placeholder="Lotação" [formControl]="lotacaoCafe">
+    </div> 
+    <div>  
+        <button (click)="cadastrarEspacoCafe()">Cadastrar</button>
+    </div> 
+</div>
+<h2>Tabela Cafés</h2>
+<table class="tabela">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            Lotação
+        </th>
+    </tr>
+
+    <tr *ngFor="let item of espacosCafe">
+        <td>
+            {{item.Id}}
+        </td>
+        <td>
+            {{item.Nome}}
+        </td>
+        <td>
+            {{item.Lotacao}}
+        </td>
+    </tr>
+</table>

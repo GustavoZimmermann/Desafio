@@ -1,0 +1,36 @@
+<h2>Cadastro Salas</h2>
+<div> 
+    <div>
+        <input type="text" id="nome" placeholder="Nome" [formControl]="nomeEvento"><br>
+        <input type="number" id="lotação" placeholder="Lotação" [formControl]="lotacaoEvento">
+    </div> 
+    <div>  
+        <button (click)="cadastrarSalaEvento()">Cadastrar</button>
+    </div> 
+</div>
+<h2>Tabela Salas</h2>
+<table class="tabela">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Nome
+        </th>
+        <th>
+            Lotação
+        </th>
+    </tr>
+
+    <tr *ngFor="let item of salasEvento">
+        <td>
+            {{item.Id}}
+        </td>
+        <td>
+            {{item.Nome}}
+        </td>
+        <td>
+            {{item.Lotacao}}
+        </td>
+    </tr>
+</table>
